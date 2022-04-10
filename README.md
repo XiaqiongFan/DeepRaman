@@ -27,7 +27,7 @@ These packages are included in the integration tool Anaconda [(https://www.anaco
 
 **1.Training your model**
 
-Run the file 'training.py'.The corresponding example data have been uploaded to the folder named 'augmented data'.
+Run the file 'training.py'.
 
 **2.Predict mixture spectra**
 
