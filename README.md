@@ -22,7 +22,8 @@ The packages mainly include: numpy,Matplotlib,sklearn and os.
 These packages are included in the integration tool Anaconda [(https://www.anaconda.com).](https://www.anaconda.com/) 
 
 # Clone the repository and run it directly
-[git clone](https://github.com/xiaqiong/DeepRaman) 
+
+[git clone](https://github.com/XiaqiongFan/DeepRaman) 
 
 **1.Training your model**
 
