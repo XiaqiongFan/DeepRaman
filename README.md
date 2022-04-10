@@ -28,9 +28,10 @@ These packages are included in the integration tool Anaconda [(https://www.anaco
 
 Run the file 'training.py'.The corresponding example data have been uploaded to the folder named 'augmented data'.
 
-**2.Predict mixture spectra data**
+**2.Predict mixture spectra**
 
-Run the file 'testing.py'. The input 1 and input 2 represent pure component spectrum and unknown spectrum, respectively.
+Run the file 'testing.py'. Some data has been upload as examples.
+The input 1 and input 2 represent pure component spectrum and unknown spectrum, respectively.
 
 # Contact
 
