@@ -37,5 +37,6 @@ More example data for testing can be download at [Google driver.](https://drive.
 
 # Contact
 
-Xiaqiong Fan: xiaqiongfan@csu.edu.cn
+Xiaqiong Fan: fxq@haut.edu.cn
+Zhimin Zhang: zmzhang@csu.edu.cn
 
