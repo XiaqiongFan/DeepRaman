@@ -27,13 +27,13 @@ These packages are included in the integration tool Anaconda [(https://www.anaco
 
 **1.Training your model**
 
-Run the file 'training.py'. Since the data exceeded the limit, we have uploaded some example data for training，download at [Google driver.](https://drive.google.com/drive/folders/1ZFap6KUU6ZX24pVmBwse7CQyZUuZr4An?usp=sharing)
+Run the file 'training.py'. Since the data exceeded the limit, we have uploaded some example data for training，download at [releases.](https://github.com/XiaqiongFan/DeepRaman/releases)
 
 **2.Predict mixture spectra**
 
 Run the file 'testing.py'. Some data has been upload as examples.
 The input 1 and input 2 represent pure component spectrum and unknown spectrum, respectively.
-More example data for testing can be download at [Google driver.](https://drive.google.com/drive/folders/1ZFap6KUU6ZX24pVmBwse7CQyZUuZr4An?usp=sharing)
+More example data for testing can be download at [releases.](https://github.com/XiaqiongFan/DeepRaman/releases)
 
 # Contact
 
