@@ -7,19 +7,11 @@ Raman spectra contain abundant information from molecules but are difficult to a
 <img src=https://github.com/XiaqiongFan/DeepRaman/blob/main/WF.png?raw=true" width="70%">
 </div>
 
-# Installation
+# Depends
 
-## python and TensorFlow
+```
+pip install -r requirements.txt
 
-Python 3.6.8，available at [https://www.python.org.](https://www.python.org/) 
-
-TensorFlow (version 2.0.0-GPU)，available at [https://github.com/tensorflow.](https://github.com/tensorflow) 
-
-## Install dependent packages
-
-The packages mainly include: numpy,Matplotlib,sklearn and os.
-
-These packages are included in the integration tool Anaconda [(https://www.anaconda.com).](https://www.anaconda.com/) 
 
 # Clone the repository and run it directly
 
