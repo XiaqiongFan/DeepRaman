@@ -204,6 +204,7 @@ if __name__ == '__main__':
     "SpatialPyramidPooling" :  SpatialPyramidPooling,
     }     
 
+    # define the data path and save path
     datapath = './data'
 
     start = time.time()
@@ -231,7 +232,7 @@ if __name__ == '__main__':
                         validation_data = reader(Xvalid,Yvalid,200),
                         validation_steps = 1)
        
-            
+    # learning cures        
     fig = plt.figure(figsize = (6,4.5))
     ax = fig.add_subplot(111)       
     ax.set_ylabel('Accuracy',size=15)
