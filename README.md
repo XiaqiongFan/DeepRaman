@@ -11,11 +11,9 @@ Raman spectra contain abundant information from molecules but are difficult to a
 
 ```
 pip install -r requirements.txt
+```
 
-
-# Clone the repository and run it directly
-
-[git clone](https://github.com/XiaqiongFan/DeepRaman) 
+# Usage
 
 **1.Training your model**
 
