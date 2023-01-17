@@ -128,15 +128,21 @@ if __name__ == '__main__':
     "SpatialPyramidPooling" :  SpatialPyramidPooling,
     }   
     
-    
+    # Import Data 
+    # Database
     datafile0 = u'./data/database_for_Liquid_and_powder_mixture.npy'
     spectrum_pure = np.load(datafile0) 
-
+    
+    # Unknow
     datafile1 =u'./data/unknown_Liquid_and_powder_mixture.npy'
     spectrum_mix = np.load(datafile1)     
-
+    
+    # Component information of database
     csv_reader = csv.reader(open(u'./data/database_for_Liquid_and_powder_mixture.csv', encoding='utf-8'))
     DBcoms = [row for row in csv_reader]    
+    
+    
+    # Data process
 
     spectrum_pure_sc =  copy.deepcopy(spectrum_pure)
     spectrum_mix_sc = copy.deepcopy(spectrum_mix)
@@ -153,16 +159,19 @@ if __name__ == '__main__':
             X[int(p*spectrum_pure_sc.shape[0]+q),0,:,0] = spectrum_mix_sc[p,:]
             X[int(p*spectrum_pure_sc.shape[0]+q),1,:,0] = spectrum_pure_sc[q,:]
             
-
+    
+    # Reload and predict
     re_model = tf.keras.models.load_model('./model/model.h5', custom_objects=_custom_objects)
     y = re_model.predict(X)
 
+    
+    # airPLS for baseline removal
     spectrum_pure = WhittakerSmooth_MAT(spectrum_pure, lamb=1)
     spectrum_pure = airPLS_MAT(spectrum_pure, lamb=10, itermax=10)
     spectrum_mix = WhittakerSmooth_MAT(spectrum_mix, lamb=1)
     spectrum_mix = airPLS_MAT(spectrum_mix, lamb=10, itermax=10)
     
-
+    # NN-EN for ratio estimation
     for cc in range(spectrum_mix.shape[0]):
         com=[]
         coms = []
@@ -188,7 +197,4 @@ if __name__ == '__main__':
         print('The',cc, 'spectra may contain:',coms)
         print('The corresponding ratio is:', ratio_sc)
 
-        
-
-
-
+ 
