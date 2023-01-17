@@ -1,0 +1,7 @@
+numpy==1.19.2
+tensorflow_gpu==2.0.0
+scipy==1.1.0
+pandas==1.1.5
+matplotlib==3.3.4
+scikit_learn==0.24.2
+seaborn==0.11.2
