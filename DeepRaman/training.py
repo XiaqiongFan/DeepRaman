@@ -15,7 +15,7 @@ import os
 import time
 from tensorflow.keras.layers import Layer
 
-
+#   Define SpatialPyramidPooling
 class SpatialPyramidPooling(Layer):
 
     def __init__(self, pool_list, **kwargs):
@@ -86,8 +86,11 @@ class SpatialPyramidPooling(Layer):
         return outputs
 
 
-
 def SSPmodel(X):
+    # X：processed training data [:,2,N,1],N represents the length of spectra
+    # inputA: spectra from database
+    # inputB：spectra of unknown
+    
 
     inputs = tf.keras.layers.Input((2,None,1))
     
@@ -149,8 +152,6 @@ def randomize(dataset, labels):
 
 
 def reader(dataX,dataY,batch_size):
-
-
     step = 0
     steps = dataX.shape[0]//batch_size    
     while True:
@@ -162,6 +163,7 @@ def reader(dataX,dataY,batch_size):
         step = (step+1)% steps
     
 def load_data(datapath):
+    
     datafileX = datapath+'/training_X.npy'
     Xtrain0 = np.load(datafileX)   
     datafileY = datapath+'/training_Y.npy'
@@ -201,19 +203,20 @@ if __name__ == '__main__':
     _custom_objects = {
     "SpatialPyramidPooling" :  SpatialPyramidPooling,
     }     
-    
+
     datapath = './data'
 
     start = time.time()
     savepath = './model'
     mkdir(savepath)
 
-
+    # load data
     Xtrain,Ytrain,Xvalid,Yvalid = load_data(datapath)  
  
     tf.keras.backend.clear_session()
     ops.reset_default_graph()
     
+    # model training
     model = SSPmodel(Xtrain)
     model.compile(optimizer=tf.keras.optimizers.SGD(),
                  loss='binary_crossentropy',
